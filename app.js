@@ -1,14 +1,14 @@
 /*-------------------------------- Constants --------------------------------*/
 const display = document.querySelectorAll('.display')[0];
 const buttons = document.querySelectorAll('.button');
-
+const calculator = document.querySelector('#calculator');
+const calculatorObj = document.querySelector('#calculator');
 
 /*-------------------------------- Variables --------------------------------*/
 let num1 = '';
 let num2 = '';
 let total = 0
 let operator;
-let clearButton = '';
 let firstNumberCompleted = false
 
 
@@ -20,10 +20,7 @@ buttons.forEach((button) => {
   });
 });
 
-/*-------------------------------- Functions --------------------------------*/
-
-  const calculator = document.querySelector('#calculator');
-  calculator.addEventListener('click', (event) => {
+calculator.addEventListener('click', (event) => {
     if (event.target.classList.contains('number')) {
        if(firstNumberCompleted !==true){
         num1 += event.target.innerText
@@ -34,6 +31,8 @@ buttons.forEach((button) => {
        }
        console.log(num1, num2);
     }
+/*-------------------------------- Functions --------------------------------*/
+ 
     
     // Example
     if (event.target.innerText === '+') {
@@ -55,20 +54,23 @@ buttons.forEach((button) => {
         firstNumberCompleted = true;
         operator = '/';
      }
+     if (event.target.innerText === 'C') {
+        display.textContent = "";
+     }
 
      if(event.target.innerText === '=') {
-        if (operator ==='+') {
+        if (operator === '+') {
             total = parseInt(num1) + parseInt(num2)
             console.log(total)
             num1 = ''
             num2 = ''
-        } else  if (operator ==='-') {
-            total = parseInt(num1) - parseInt(num2)
+        } else  if (operator === '*') {
+            total = parseInt(num1) * parseInt(num2)
             console.log(total)
             num1 = ''
             num2 = ''
-        } else if (operator === '*') {
-            total = parseInt(num1) * parseInt(num2)
+        } else if (operator === '-') {
+            total = parseInt(num1) - parseInt(num2)
             console.log(total)
             num1 = ''
             num2 = ''
