@@ -56,12 +56,12 @@ calculator.addEventListener('click', (event) => {
      }
 
      if(event.target.innerText === '=') {
-        if (operator ==='+') {
+        if (operator === '+') {
             total = parseInt(num1) + parseInt(num2)
             console.log(total)
             num1 = ''
             num2 = ''
-        } else  if (operator ==='*') {
+        } else  if (operator === '*') {
             total = parseInt(num1) * parseInt(num2)
             console.log(total)
             num1 = ''
@@ -82,6 +82,9 @@ calculator.addEventListener('click', (event) => {
         firstNumberCompleted = false;
     }})
 
-function clearButton(buttonOperator) {
-    form.displayResult.value = form.displayResult.value + XPathResult;
+function clearButton() {
+    var display = document.getElementByClass('operator');
+    if (display) {
+        display.value = "";
+    }
 }
