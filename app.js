@@ -85,9 +85,9 @@ calculator.addEventListener('click', (event) => {
         firstNumberCompleted = false;
     }})
 
-function clearButton() {
-    var display = document.getElementByClass('operator');
-    if (display) {
-        display.value = "";
-    }
-}
+// function clearButton() {
+//     var display = document.getElementByClass('operator');
+//     if (display) {
+//         display.value = "";
+//     }
+// }
