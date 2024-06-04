@@ -1,6 +1,7 @@
 /*-------------------------------- Constants --------------------------------*/
 const display = document.querySelectorAll('.display')[0];
 const buttons = document.querySelectorAll('.button');
+const calculator = document.querySelector('#calculator');
 const calculatorObj = document.querySelector('#calculator');
 
 /*-------------------------------- Variables --------------------------------*/
@@ -21,8 +22,6 @@ buttons.forEach((button) => {
 });
 
 /*-------------------------------- Functions --------------------------------*/
-
-  const calculator = document.querySelector('#calculator');
   calculator.addEventListener('click', (event) => {
     if (event.target.classList.contains('number')) {
        if(firstNumberCompleted !==true){
