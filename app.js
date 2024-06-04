@@ -84,3 +84,10 @@ calculator.addEventListener('click', (event) => {
         total = 0;
         firstNumberCompleted = false;
     }})
+
+function clearButton() {
+    var display = document.getElementByClass('operator');
+    if (display) {
+        display.value = "";
+    }
+}
