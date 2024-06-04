@@ -9,7 +9,6 @@ let num1 = '';
 let num2 = '';
 let total = 0
 let operator;
-let clearButton = '';
 let firstNumberCompleted = false
 
 
