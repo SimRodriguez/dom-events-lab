@@ -1,7 +1,7 @@
 /*-------------------------------- Constants --------------------------------*/
 const display = document.querySelectorAll('.display')[0];
 const buttons = document.querySelectorAll('.button');
-
+const calculatorObj = document.querySelector('#calculator');
 
 /*-------------------------------- Variables --------------------------------*/
 let num1 = '';
@@ -82,3 +82,7 @@ buttons.forEach((button) => {
         total = 0;
         firstNumberCompleted = false;
     }})
+
+display.clearScreen = function() {
+      screen.value = '';
+  };
