@@ -62,12 +62,12 @@ buttons.forEach((button) => {
             console.log(total)
             num1 = ''
             num2 = ''
-        } else  if (operator ==='-') {
+        } else  if (operator ==='*') {
             total = parseInt(num1) - parseInt(num2)
             console.log(total)
             num1 = ''
             num2 = ''
-        } else if (operator === '*') {
+        } else if (operator === '-') {
             total = parseInt(num1) * parseInt(num2)
             console.log(total)
             num1 = ''
