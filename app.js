@@ -20,8 +20,7 @@ buttons.forEach((button) => {
   });
 });
 
-/*-------------------------------- Functions --------------------------------*/
-  calculator.addEventListener('click', (event) => {
+calculator.addEventListener('click', (event) => {
     if (event.target.classList.contains('number')) {
        if(firstNumberCompleted !==true){
         num1 += event.target.innerText
@@ -32,6 +31,8 @@ buttons.forEach((button) => {
        }
        console.log(num1, num2);
     }
+/*-------------------------------- Functions --------------------------------*/
+ 
     
     // Example
     if (event.target.innerText === '+') {
@@ -61,12 +62,12 @@ buttons.forEach((button) => {
             num1 = ''
             num2 = ''
         } else  if (operator ==='*') {
-            total = parseInt(num1) - parseInt(num2)
+            total = parseInt(num1) * parseInt(num2)
             console.log(total)
             num1 = ''
             num2 = ''
         } else if (operator === '-') {
-            total = parseInt(num1) * parseInt(num2)
+            total = parseInt(num1) - parseInt(num2)
             console.log(total)
             num1 = ''
             num2 = ''
