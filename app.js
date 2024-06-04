@@ -82,6 +82,6 @@ buttons.forEach((button) => {
         firstNumberCompleted = false;
     }})
 
-display.clearScreen = function() {
-      screen.value = '';
-  };
+function clearButton(buttonOperator) {
+    form.displayResult.value = form.displayResult.value + XPathResult;
+}
